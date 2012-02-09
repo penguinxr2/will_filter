@@ -133,6 +133,7 @@ module WillFilter
           if col.name == ("recent_kscore" or "twitter_description" or "twitter_location" or "name" or "twitter_handle")
           defs[col.name.to_sym] = default_condition_definition_for(col.name, col.sql_type)
           end
+        end
         inner_joins.each do |inner_join|
           join_class = association_class(inner_join)
           join_class.columns.each do |col|
