@@ -131,7 +131,7 @@ module WillFilter
         defs = {}
         model_columns.each do |col|
           #only show the following columns in the filter if the class matches "Person"
-          if model_class_name=="Person"
+          if self.model_class_name=="Person"
             if ["recent_kscore","twitter_description","twitter_location","name","twitter_handle"].include? col.name
             defs[col.name.to_sym] = default_condition_definition_for(col.name, col.sql_type)
             end
