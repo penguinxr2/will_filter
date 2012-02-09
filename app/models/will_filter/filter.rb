@@ -130,7 +130,7 @@ module WillFilter
       @definition ||= begin
         defs = {}
         model_columns.each do |col|
-          if col.name == ("recent_kscore" or "twitter_description" or "twitter_location" or "name" or "twitter_handle")
+          if ["recent_kscore","twitter_description","twitter_location","name","twitter_handle"].include? col.name
           defs[col.name.to_sym] = default_condition_definition_for(col.name, col.sql_type)
           end
         end
