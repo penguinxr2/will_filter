@@ -45,10 +45,19 @@ module WillFilter
       end
     
       def sql_condition
-        return [" #{condition.full_key} = ? ", value]                if operator == :is
-        return [" #{condition.full_key} <> ? ", value]               if operator == :is_not
+          case ActiveRecord::Base.connection.adapter_name 
+            when 'PostgreSQL' 
+        return [" #{condition.full_key} = ? ", value]                 if operator == :is
+        return [" #{condition.full_key} <> ? ", value]                if operator == :is_not
+        return [" #{condition.full_key} ilike ? ", "%#{value}%"]      if operator == :contains
+        return [" #{condition.full_key} not ilike ? ", "%#{value}%"]  if operator == :does_not_cotain
+            else 
+        return [" #{condition.full_key} = ? ", value]                 if operator == :is
+        return [" #{condition.full_key} <> ? ", value]                if operator == :is_not
         return [" #{condition.full_key} like ? ", "%#{value}%"]      if operator == :contains
         return [" #{condition.full_key} not like ? ", "%#{value}%"]  if operator == :does_not_cotain
+            end   
+       
       end
     
     end
