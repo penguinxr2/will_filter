@@ -1,6 +1,40 @@
 <%= will_filter_scripts_tag %>
+<script type="text/javascript">
+  $(function() {
+    $( "#slider" ).slider(
+    {
+    value: 45
+    });
+  });
+:javascript
+  $(function() {
+    $( "#slider1" ).slider(
+    {
+    value: 45
+    });
+  });
+ </script>
 
 <%= form_tag({}, {:method => :get, :name=>'wf_form', :id => 'wf_form', :class => 'wf_form' }) do %>
+
+<div class="container_12">
+  <div class="grid_2">
+    Influence:
+  </div>
+  <div class="grid_10">
+    <div id="slider" style="width: 725px"></div>
+  </div>
+</div>
+<div class="container_12">
+  <div class="grid_2">
+    Accessibility:
+  </div>
+  <div class="grid_10">
+    <div id="slider" style="width: 725px"></div>
+  </div>
+</div>
+<br>
+<br>
 <div class="wf_container">
   <div id="wf_filter_conditions" class="conditions">
       <%= render :partial=> "/will_filter/filter/conditions", :locals => {:wf_filter => wf_filter} %>
