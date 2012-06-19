@@ -11,14 +11,6 @@
 
 <div class="header">
   <% if wf_filter.show_save_options? %>
-    <div class="end">
-      <%=link_to_function("<span>Save As New...</span>".html_safe, "wfFilter.saveFilter()", :class => "wf_grey_button wf_pcb") %>
-      <%=link_to_function("<span>Update</span>".html_safe, "wfFilter.updateFilter()", :class => "wf_grey_button wf_pcb") %>
-      <%=link_to_function("<span>Delete</span>".html_safe, "wfFilter.deleteFilter()", :class => "wf_grey_button wf_pcb") %>
-      <% if wf_filter.show_export_options? %>
-        <%=link_to_function("<span>Export Data...</span>".html_safe, "wfExporter.show(this)", :class => "wf_grey_button wf_pcb") %>
-      <% end %>
-    </div>
   <% end %>
   <div>
     <% unless wf_filter.saved_filters.empty? %>
