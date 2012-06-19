@@ -1,6 +1,21 @@
 <%= will_filter_scripts_tag %>
 <%= form_tag({}, {:method => :get, :name=>'wf_form', :id => 'wf_form', :class => 'wf_form' }) do %>
-<div id="slider"></div>
+<div id="container_12">
+  <div id="grid_2">
+    Influence:
+  </div>
+  <div id="grid_10">
+    <div id="slider"></div>
+  </div>
+</div>
+<div id="container_12">
+  <div id="grid_2">
+    Accessibility:
+  </div>
+  <div id="grid_10">
+    <div id="slider1"></div>
+  </div>
+</div>
 <div class="wf_container">
   <div id="wf_filter_conditions" class="conditions">
       <%= render :partial=> "/will_filter/filter/conditions", :locals => {:wf_filter => wf_filter} %>
