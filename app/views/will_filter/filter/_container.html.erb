@@ -23,7 +23,7 @@
   </div>
   <div class="footer">
     <div class="actions">
-       <%=link_to_function("<span>+</span>".html_safe, "wfFilter.addCondition()", :class => "addFilterBottom") %>
+       <%=link_to_function("<span>+</span>".html_safe, "wfFilter.addCondition()", :class => "addFilter") %>
       Per Page:
       <%= select_tag(:wf_per_page, options_for_select(wf_filter.per_page_options, wf_filter.per_page.to_s), {:onChange=>"markDirty()"}) %>
       &nbsp;&nbsp;
