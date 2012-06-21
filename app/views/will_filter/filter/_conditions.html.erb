@@ -27,11 +27,6 @@
     </div>
   <% end %>
 
-  <div class="filter_match_type">
-    Match <%= select_tag(:wf_match, options_for_select(wf_filter.match_options, wf_filter.match), {:onChange=>"wfFilter.markDirty()"}) %>
-    of the following conditions:
-  </div>
-
   <% if wf_filter.size == 0 %>
   
   <% else %>
