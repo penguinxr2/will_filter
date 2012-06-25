@@ -213,7 +213,7 @@ module WillFilter
     end
   
     def default_per_page
-      100 
+      300 
     end
     
     def per_page
@@ -225,7 +225,7 @@ module WillFilter
     end
     
     def default_per_page_options
-      [30, 40, 50, 100, 200]
+      [30, 40, 50, 100, 200, 300]
     end
     
     def per_page_options
