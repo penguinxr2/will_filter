@@ -17,16 +17,12 @@
        <%= select_tag(:wf_key, options_for_select(wf_filter.saved_filters, wf_filter.key), {:onChange=>"wfFilter.loadSavedFilter()"}) %>
     <% end %>
   </div>
+  
     <div class="filter_match_type">
-    <div class="end">
-      <small>
-        <%=link_to_function("Toggle Conditions", "wfFilter.toggleDebugger()") %>
-      </small>
-    </div>
     Match <%= select_tag(:wf_match, options_for_select(wf_filter.match_options, wf_filter.match), {:onChange=>"wfFilter.markDirty()"}) %>
     of the following conditions:
   </div>
-</div>
+
 
 <div class="body">
 
