@@ -213,7 +213,7 @@ module WillFilter
     end
   
     def default_per_page
-      300 
+      100 
     end
     
     def per_page
