@@ -247,45 +247,45 @@ module WillFilter
     def condition_title_for(key)
         if key == :name
           title = 'Name'
-        else if key == :twitter_location
+        elsif key == :twitter_location
           title = 'Location'
-        else if key = :gender
+        elsif key = :gender
           title = 'Gender'
-        else if key = :li_date_of_birth
+        elsif key = :li_date_of_birth
           title = 'Birthday'          
-        else if key == :twitter_handle
+        elsif key == :twitter_handle
           title = 'Twitter Username'
-        else if key == :twitter_description
+        elsif key == :twitter_description
           title = 'Twitter Bio'          
-        else if key == :followers_count
+        elsif key == :followers_count
           title = 'Number of Followers'
-        else if key = :statuses_count
+        elsif key = :statuses_count
           title = 'Number of Tweets'          
-        else if key == :recent_kscore
+        elsif key == :recent_kscore
           title = 'Klout Score'
-        else if key == :facebook_url
+        elsif key == :facebook_url
           title = 'Facebook URL'          
-        else if key == :linkedin_url
+        elsif key == :linkedin_url
           title = 'LinkedIn URL'          
-        else if key = :li_headline
+        elsif key = :li_headline
           title = 'LinkedIn Headline'
-        else if key = :li_industry
+        elsif key = :li_industry
           title = 'Industry'          
-        else if key = :li_num_connections
+        elsif key = :li_num_connections
           title = 'Number of LinkedIn Connections'          
-        else if key = :li_educations
+        elsif key = :li_educations
           title = 'Education'          
-        else if key == :li_interests
+        elsif key == :li_interests
           title = 'Interests'
-        else if key = :li_positions
+        elsif key = :li_positions
           title = 'Job Positions'
-        else if key = :li_specialties
+        elsif key = :li_specialties
           title = 'Specialties'
-        else if key = :li_honors
+        elsif key = :li_honors
           title = 'Honors'
-        else if key = :li_skills
+        elsif key = :li_skills
           title = 'Skills'
-        else if key = :googleplus_url
+        elsif key = :googleplus_url
           title = 'Google Plus URL'
         end
     end
