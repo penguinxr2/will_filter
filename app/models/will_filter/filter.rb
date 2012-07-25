@@ -248,11 +248,6 @@ module WillFilter
         title.split(" ").collect{|part| part.capitalize}.join(" ")
     end
     
-    def condition_title_for(key)
-      return 'LinkedIn Interests' if key == :li_interests
-      super(key)
-    end
-    
     def condition_options
       @condition_options ||= begin
         opts = []
