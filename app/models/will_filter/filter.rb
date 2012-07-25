@@ -244,12 +244,8 @@ module WillFilter
     # Can be overloaded for custom titles
     #############################################################################
     def condition_title_for(key)
-      if key == :li_interests
-        title = 'LinkedIn Interests'
-      else
         title = key.to_s.gsub(".", ": ").gsub("_", " ").split("/").last
         title.split(" ").collect{|part| part.capitalize}.join(" ")
-      end
     end
     
     def condition_title_for(key)
