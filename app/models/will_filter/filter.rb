@@ -246,6 +246,8 @@ module WillFilter
     def condition_title_for(key)
       title = key.to_s.gsub(".", ": ").gsub("_", " ").split("/").last
       title.split(" ").collect{|part| part.capitalize}.join(" ")
+      return "LinkedIn Interests" if key == :li_interests
+      super
     end
     
     def condition_options
