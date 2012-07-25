@@ -259,7 +259,7 @@ module WillFilter
           title = 'Twitter Bio'          
         elsif key == :followers_count
           title = 'Number of Followers'
-        elsif key = :statuses_count
+        elsif key == :statuses_count
           title = 'Number of Tweets'          
         elsif key == :recent_kscore
           title = 'Klout Score'
