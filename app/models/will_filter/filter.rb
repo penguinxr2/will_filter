@@ -287,6 +287,7 @@ module WillFilter
           title = 'Skills'
         else if key = :googleplus_url
           title = 'Google Plus URL'
+        end
     end
     
     def condition_options
