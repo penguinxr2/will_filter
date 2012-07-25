@@ -132,7 +132,8 @@ module WillFilter
         model_columns.each do |col|
           #only show the following columns in the filter if the class matches "Person"
           if self.model_class_name=="Person"
-            if ["recent_kscore","twitter_description","twitter_location","name","twitter_handle","friends_count","facebook_url","linkedin_url","googleplus_url","aboutme_url","fullcontact_networks","fullcontact_date","li_interests","li_num_connections","li_headline","li_location","li_positions","li_industry","li_date_of_birth","li_specialties","li_honors","li_skills","li_educations","gender","statuses_count"].include? col.name
+            if ["recent_kscore","twitter_description","followers_count","twitter_location","name","twitter_handle","friends_count","facebook_url","linkedin_url","googleplus_url","li_interests","li_num_connections","li_headline","li_positions","li_industry","li_date_of_birth","li_specialties","li_honors","li_skills","li_educations","gender","statuses_count"].include? col.name
+
             defs[col.name.to_sym] = default_condition_definition_for(col.name, col.sql_type)
             end
           else
@@ -244,11 +245,48 @@ module WillFilter
     # Can be overloaded for custom titles
     #############################################################################
     def condition_title_for(key)
-        if key == :li_interests
-          title = 'LinkedIn Interests'
-        else
-          title = 'Not LinkedIn Interests'
-        end
+        if key == :name
+          title = 'Name'
+        else if key == :twitter_location
+          title = 'Location'
+        else if key = :gender
+          title = 'Gender'
+        else if key = :li_date_of_birth
+          title = 'Birthday'          
+        else if key == :twitter_handle
+          title = 'Twitter Username'
+        else if key == :twitter_description
+          title = 'Twitter Bio'          
+        else if key == :followers_count
+          title = 'Number of Followers'
+        else if key = :statuses_count
+          title = 'Number of Tweets'          
+        else if key == :recent_kscore
+          title = 'Klout Score'
+        else if key == :facebook_url
+          title = 'Facebook URL'          
+        else if key == :linkedin_url
+          title = 'LinkedIn URL'          
+        else if key = :li_headline
+          title = 'LinkedIn Headline'
+        else if key = :li_industry
+          title = 'Industry'          
+        else if key = :li_num_connections
+          title = 'Number of LinkedIn Connections'          
+        else if key = :li_educations
+          title = 'Education'          
+        else if key == :li_interests
+          title = 'Interests'
+        else if key = :li_positions
+          title = 'Job Positions'
+        else if key = :li_specialties
+          title = 'Specialties'
+        else if key = :li_honors
+          title = 'Honors'
+        else if key = :li_skills
+          title = 'Skills'
+        else if key = :googleplus_url
+          title = 'Google Plus URL'
     end
     
     def condition_options
