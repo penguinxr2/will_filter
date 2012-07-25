@@ -287,8 +287,6 @@ module WillFilter
           title = 'Skills'
         elsif key == :googleplus_url
           title = 'Google Plus URL'
-        else
-          key = 'Not defined'
         end
     end
     
