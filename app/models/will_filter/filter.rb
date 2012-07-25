@@ -250,6 +250,7 @@ module WillFilter
     
     def condition_title_for(key)
       return 'LinkedIn Interests' if key == :li_interests
+      super
     end
 
     def condition_options
