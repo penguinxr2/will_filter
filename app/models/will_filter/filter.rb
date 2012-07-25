@@ -244,7 +244,11 @@ module WillFilter
     # Can be overloaded for custom titles
     #############################################################################
     def condition_title_for(key)
-        title = 'LinkedIn Interests'
+        if key == :li_interests
+          title = 'LinkedIn Interests'
+        else
+          title = 'Not LinkedIn Interests'
+        end
     end
     
     def condition_options
