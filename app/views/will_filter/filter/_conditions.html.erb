@@ -10,6 +10,11 @@
 </div>
 
 <div class="header">
+  <% if wf_filter.show_export_options? %>
+    <div class="end" style="padding-left:3px;">
+      <%=link_to_function("<span>Export Data...</span>".html_safe, "wfExporter.show(this)", :class => "wf_grey_button wf_pcb") %>
+    </div>  
+  <% end %>
   <% if wf_filter.show_save_options? %>
   <% end %>
   <div>
