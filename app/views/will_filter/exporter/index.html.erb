@@ -25,7 +25,7 @@
 	    </tr><% @wf_filter.model_class.columns.each_with_index do |col, index| %>
 	    <tr>
 	        <td>
-	            <input type="checkbox" id="wf_fld_chk_<%=index%>" onClick="firstEmptyFilter(); wfFilter.removeConditionAt(firstEmptyFilterValue); wfExporter.selectField(this);" style="width:20px;"><input type="hidden" id="wf_fld_name_<%=index%>" value="<%=col.name%>">
+	            <input type="checkbox" id="wf_fld_chk_<%=index%>" onClick="firstEmptyFilter(); wfFilter.removeConditionAt(firstEmptyFilterValue); firstEmptyFilter(); wfExporter.selectField(this);" style="width:20px;"><input type="hidden" id="wf_fld_name_<%=index%>" value="<%=col.name%>">
 	        </td>
 	        <td>
 	            <%=col.name %>
