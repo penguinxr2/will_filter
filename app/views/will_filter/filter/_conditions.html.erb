@@ -20,8 +20,6 @@
     Match <%= select_tag(:wf_match, options_for_select(wf_filter.match_options, wf_filter.match), {:onChange=>"wfFilter.markDirty()"}) %>
     of the following conditions:
 
-</div>
-
 <div class="body">
 
   <% if wf_filter.errors[:filter] %>
