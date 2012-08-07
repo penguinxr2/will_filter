@@ -252,7 +252,7 @@ module WillFilter
         elsif key == :gender
           title = 'Gender'
         elsif key == :li_date_of_birth
-          title = 'Birthday'          
+          title = 'Date of Birth'          
         elsif key == :twitter_handle
           title = 'Twitter Username'
         elsif key == :twitter_description
