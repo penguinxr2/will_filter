@@ -274,7 +274,7 @@ module WillFilter
         elsif key == :li_num_connections
           title = 'Number of LinkedIn Connections'          
         elsif key == :li_educations
-          title = 'Education'          
+          title = 'College Education'          
         elsif key == :li_interests
           title = 'Interests'
         elsif key == :li_positions
