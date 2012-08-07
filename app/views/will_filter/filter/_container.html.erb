@@ -16,7 +16,7 @@
        <%= select_tag(:wf_order_type, options_for_select(wf_filter.order_type_options, wf_filter.order_type), {:onChange=>"markDirty()"}) %>
        order.
       &nbsp;&nbsp;
-      <%=link_to_function("<span>Submit Filter</span>".html_safe, "wfFilter.submit()", :class => "wf_grey_button wf_pcb") %>
+      <%=link_to_function("<span>Submit Filter</span>".html_safe, "wfFilter.submit()", :class => "buttonSmall") %>
     </div>
     <div>
       &nbsp;&nbsp;
