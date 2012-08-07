@@ -1,7 +1,7 @@
 <%= will_filter_scripts_tag %>
 <%= form_tag({}, {:method => :get, :name=>'wf_form', :id => 'wf_form', :class => 'wf_form' }) do %>
 <br><br>
-<h3>3. Add conditions to filter the cluster.</h3>
+<h3>3. Add conditions to segment followers of the accounts you selected.</h3>
 <div class="wf_container">
   <div id="wf_filter_conditions" class="conditions">
       <%= render :partial=> "/will_filter/filter/conditions", :locals => {:wf_filter => wf_filter} %>
